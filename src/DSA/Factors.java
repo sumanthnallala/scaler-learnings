@@ -14,6 +14,7 @@ public class Factors {
     long startTime = System.currentTimeMillis();
     Scanner scanner = new Scanner(System.in);
     System.out.println("Enter the number: ");
+    // logic
     int num = 255550000;
     int count = 0;
     for (int i = 1; i <= num; i++) {
@@ -21,12 +22,11 @@ public class Factors {
         count++;
       }
     }
+
     long endTime = System.currentTimeMillis();
     long executionTimeInMS = (endTime - startTime);
-    long executionTimeInSeconds = (endTime - startTime) / 1000;
     System.out.println("Number of factors are " + count);
     System.out.println("Brute force time in ms " + executionTimeInMS);
-    System.out.println("Brute force time in seconds " + executionTimeInSeconds);
   }
 
   public static void findFactorsNew() {
@@ -34,6 +34,7 @@ public class Factors {
     long startTime = System.currentTimeMillis();
     Scanner scanner = new Scanner(System.in);
     System.out.println("Enter the number: ");
+    //logic
     int num = 255550000;
     int count = 0;
     for (int i = 1; i <= Math.sqrt(num); i++) {
@@ -44,12 +45,11 @@ public class Factors {
         count += 2;
       }
     }
+
     long endTime = System.currentTimeMillis();
     long executionTimeInMS = (endTime - startTime);
-    long executionTimeInSeconds = (endTime - startTime) / 1000;
     System.out.println("Number of factors are " + count);
     System.out.println("optimized time in ms " + executionTimeInMS);
-    System.out.println("optimized time in seconds " + executionTimeInSeconds);
   }
 
 }
