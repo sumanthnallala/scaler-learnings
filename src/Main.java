@@ -1,5 +1,3 @@
-import Arrays.ArrayProblems;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -15,8 +13,6 @@ public class Main {
         for(Map.Entry<Character, Character> result: res.entrySet()  ){
             System.out.println(result.getKey()+"="+result.getValue());
         }
-        ArrayProblems a=new ArrayProblems();
-        a.reverseArray();
     }
 
 
