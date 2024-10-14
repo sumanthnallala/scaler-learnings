@@ -19,3 +19,9 @@ shortcuts
 
 |-> shortcuts to find a string ctrl+f
 |-> shortcut to replace a string ctrl+r
+
+public class Solution {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}

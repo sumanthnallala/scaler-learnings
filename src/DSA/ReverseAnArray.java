@@ -6,9 +6,9 @@ public class ReverseAnArray {
 
   public static void main(String[] args) {
     int[] arr = {1, 2, 3, 4};
-//    reverseAnArray(arr);
-//    reverseString();
-//    reverseAnArrayRange(arr, 1, 2);
+    reverseAnArray(arr);
+    reverseString();
+    reverseAnArrayRange(arr, 1, 2);
     rotateAnArray();
   }
 
