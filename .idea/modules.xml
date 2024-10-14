@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/scaler-learnings.iml" filepath="$PROJECT_DIR$/.idea/scaler-learnings.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/Scaler.iml" filepath="$PROJECT_DIR$/Scaler.iml" />
+>>>>>>> master
     </modules>
   </component>
 </project>

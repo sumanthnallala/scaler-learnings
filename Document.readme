@@ -1,0 +1,27 @@
+primitive data types
+---------------------------
+
+non_numeric
+|-> char and boolean
+
+numeric
+|-> integer --> byte, short, int, long.
+|-> floating -->  float, double.
+
+|-> long should be declared with extension as L
+|-> you can use underscore between numbers --> 1_000_000_000L
+
+shortcuts
+----------
+|- shortcut to add a single line comment - cmd + /
+|-> shortcut to add multiline comment - cmd + shift + /
+|-> shortcut to print a statement sout.
+
+|-> shortcuts to find a string ctrl+f
+|-> shortcut to replace a string ctrl+r
+
+public class Solution {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
