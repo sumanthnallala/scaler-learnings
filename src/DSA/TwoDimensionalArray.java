@@ -6,6 +6,7 @@ public class TwoDimensionalArray {
 
   public static void main(String[] args) {
     rowWiseSum();
+    columnWiseSum();
   }
 
   public static int[][] declareAndInitialize() {
@@ -21,19 +22,36 @@ public class TwoDimensionalArray {
         arr[i][j] = i + j;
       }
     }
-    System.out.println(Arrays.deepToString(arr1));
     return arr;
   }
 
   public static void rowWiseSum() {
     // calculate the row wise sum for a 2D Matrix
     int[][] arr = declareAndInitialize();
-    System.out.println(Arrays.deepToString(arr));
+    int r = arr.length;
+    int c = arr[0].length;
+    for(int i = 0; i < r; i++) {
+      int sum = 0;
+      for(int j = 0; j < c; j++) {
+        sum += arr[i][j];
+      }
+      System.out.printf("sum of the row %d is %d\n", i ,sum);
+    }
+    System.out.println();
   }
 
   public static void columnWiseSum() {
     // calculate the column wise sum for a 2D Matrix
+    int[][] arr = declareAndInitialize();
+    int r = arr.length;
+    int c = arr[0].length;
+    for(int i = 0; i < c; i++) {
+      int sum = 0;
+      for(int j = 0; j < r; j++) {
+        sum += arr[j][i];
+      }
+      System.out.printf("sum of the column %d is %d\n", i ,sum);
+    }
   }
-
 
 }
