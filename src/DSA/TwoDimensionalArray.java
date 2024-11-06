@@ -12,6 +12,7 @@ public class TwoDimensionalArray {
     allDiagonals();
     transposeOfSquareMatrix();
     transposeOfMatrix();
+    rotateMatrix();
   }
 
   public static int[][] declareAndInitialize2DArray() {
@@ -24,7 +25,7 @@ public class TwoDimensionalArray {
     int columns = arr[0].length;
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < columns; j++) {
-        arr[i][j] = (i + 1) * (j);
+        arr[i][j] = (i + 1) * (j + 5);
       }
     }
     return arr;
@@ -133,12 +134,39 @@ public class TwoDimensionalArray {
     System.out.println(Arrays.deepToString(arr));
     int m = arr.length;
     int n = arr[0].length;
-    int [][] newArr =  new int[n][m];
+    int[][] newArr = new int[n][m];
     for (int i = 0; i < n; i++) {
       for (int j = 0; j < m; j++) {
         newArr[i][j] = arr[j][i];
       }
     }
     System.out.println(Arrays.deepToString(newArr));
+  }
+
+  public static void rotateMatrix() {
+    int[][] arr = declareAndInitialize2DArray();
+    System.out.println(Arrays.deepToString(arr));
+    System.out.println();
+    int m = arr.length;
+    int n = arr[0].length;
+    for (int i = 0; i < m; i++) {
+      for (int j = i + 1; j < n; j++) {
+        int temp = arr[i][j];
+        arr[i][j] = arr[j][i];
+        arr[j][i] = temp;
+      }
+    }
+    System.out.println(Arrays.deepToString(arr));
+    for (int i = 0; i < m; i++) {
+      int j = 0, k = m - 1;
+      while (j < k) {
+        int temp = arr[i][j];
+        arr[i][j] = arr[i][k];
+        arr[i][k] = temp;
+        j++;
+        k--;
+      }
+    }
+    System.out.println(Arrays.deepToString(arr));
   }
 }
