@@ -10,6 +10,8 @@ public class TwoDimensionalArray {
     diagonalSum();
     antiDiagonalSum();
     allDiagonals();
+    transposeOfSquareMatrix();
+    transposeOfMatrix();
   }
 
   public static int[][] declareAndInitialize2DArray() {
@@ -17,12 +19,12 @@ public class TwoDimensionalArray {
     int[][] arr1 = {{1, 2, 3}, {1, 2, 3}};
 
     // 2nd way
-    int[][] arr = new int[4][3];
+    int[][] arr = new int[3][3];
     int rows = arr.length;
     int columns = arr[0].length;
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < columns; j++) {
-        arr[i][j] = (i + 1) * (j + 1);
+        arr[i][j] = (i + 1) * (j);
       }
     }
     return arr;
@@ -99,7 +101,7 @@ public class TwoDimensionalArray {
       }
     }
 
-    for (int i = 1 ; i < m ; i++) {
+    for (int i = 1; i < m; i++) {
       int r = i, c = n - 1;
       while (r < m && c >= 0) {
         System.out.println(arr[r][c]);
@@ -107,5 +109,36 @@ public class TwoDimensionalArray {
         c--;
       }
     }
+  }
+
+  public static void transposeOfSquareMatrix() {
+    // square matrix
+    int[][] arr = declareAndInitialize2DArray();
+    System.out.println(Arrays.deepToString(arr));
+    int m = arr.length;
+    int n = arr[0].length;
+    for (int i = 0; i < m; i++) {
+      for (int j = i + 1; j < n; j++) {
+        int temp = arr[i][j];
+        arr[i][j] = arr[j][i];
+        arr[j][i] = temp;
+      }
+    }
+    System.out.println(Arrays.deepToString(arr));
+  }
+
+  public static void transposeOfMatrix() {
+    // Non square matrix
+    int[][] arr = declareAndInitialize2DArray();
+    System.out.println(Arrays.deepToString(arr));
+    int m = arr.length;
+    int n = arr[0].length;
+    int [][] newArr =  new int[n][m];
+    for (int i = 0; i < n; i++) {
+      for (int j = 0; j < m; j++) {
+        newArr[i][j] = arr[j][i];
+      }
+    }
+    System.out.println(Arrays.deepToString(newArr));
   }
 }
