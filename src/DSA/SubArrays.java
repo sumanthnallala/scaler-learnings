@@ -13,6 +13,7 @@ public class SubArrays {
     contributionTechnique();
     totalNoOfSubArraysWithLengthK();
     printStartAndEndIndexes();
+    maxSubArraySumOfLengthK();
   }
 
   public static void findSubArrays() {
@@ -107,5 +108,32 @@ public class SubArrays {
       start++;
       end++;
     }
+  }
+
+  public static void maxSubArraySumOfLengthK() {
+    int[] arr = {1, 2, 3, 4, 5, 6};
+    int[] pfSum = calculatePrefixSum(arr);
+    int k = 2;
+    int n = arr.length;
+    int start = 0;
+    int end = k - 1;
+    int max = 0;
+    while (end < n) {
+      int sum = 0;
+      // using brute force
+//      for (int i = start; i <= end; i++) {
+//        sum += arr[i];
+//      }
+      // using prefix sum
+      if (start == 0) {
+        sum = pfSum[end];
+      } else {
+        sum = pfSum[end] - pfSum[start - 1];
+      }
+      max = Math.max(max, sum);
+      start++;
+      end++;
+    }
+    System.out.printf("Max Sub Array sum with length K is: %d\n", max);
   }
 }
