@@ -9,6 +9,7 @@ public class TwoDimensionalArray {
     columnWiseSum();
     diagonalSum();
     antiDiagonalSum();
+    allDiagonals();
   }
 
   public static int[][] declareAndInitialize2DArray() {
@@ -21,7 +22,7 @@ public class TwoDimensionalArray {
     int columns = arr[0].length;
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < columns; j++) {
-        arr[i][j] = i * j;
+        arr[i][j] = (i + 1) * (j + 1);
       }
     }
     return arr;
@@ -80,5 +81,31 @@ public class TwoDimensionalArray {
       total += arr[i][n - i - 1];
     }
     System.out.printf("Anti Diagonal sum of the matrix is: %d\n", total);
+  }
+
+  public static void allDiagonals() {
+    // left to right
+    int[][] arr = declareAndInitialize2DArray();
+    System.out.println(Arrays.deepToString(arr));
+    int m = arr.length;
+    int n = arr[0].length;
+    // columns
+    for (int i = 0; i < n; i++) {
+      int r = 0, c = i;
+      while (r < m && c >= 0) {
+        System.out.println(arr[r][c]);
+        r++;
+        c--;
+      }
+    }
+
+    for (int i = 1 ; i < m ; i++) {
+      int r = i, c = n - 1;
+      while (r < m && c >= 0) {
+        System.out.println(arr[r][c]);
+        r++;
+        c--;
+      }
+    }
   }
 }
