@@ -114,6 +114,7 @@ public class TwoDimensionalArray {
 
   public static void transposeOfSquareMatrix() {
     // square matrix
+    long startTime = System.currentTimeMillis();
     int[][] arr = declareAndInitialize2DArray();
     System.out.println(Arrays.deepToString(arr));
     int m = arr.length;
@@ -126,10 +127,14 @@ public class TwoDimensionalArray {
       }
     }
     System.out.println(Arrays.deepToString(arr));
+    long endTime = System.currentTimeMillis();
+    System.out.printf("Execution Time of transposeOfSquareMatrix: %d \n", endTime - startTime);
   }
 
   public static void transposeOfMatrix() {
     // Non square matrix
+    long startTime = System.currentTimeMillis();
+
     int[][] arr = declareAndInitialize2DArray();
     System.out.println(Arrays.deepToString(arr));
     int m = arr.length;
@@ -141,6 +146,8 @@ public class TwoDimensionalArray {
       }
     }
     System.out.println(Arrays.deepToString(newArr));
+    long endTime = System.currentTimeMillis();
+    System.out.printf("Execution Time of transposeOfMatrix: %d \n", endTime - startTime);
   }
 
   public static void rotateMatrix() {
