@@ -33,5 +33,6 @@ public class Sorting {
       }
     }
     System.out.println(count);
+    System.out.println(Math.pow(2, 16));
   }
 }
