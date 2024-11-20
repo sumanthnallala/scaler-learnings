@@ -2,7 +2,6 @@ package DSA;
 
 public class BitManipulation {
   public static void main(String[] args) {
-    System.out.println(1/2);
     String a = "101";
     String b = "1001";
     StringBuilder result = new StringBuilder();
